@@ -1,0 +1,31 @@
+Options -Indexes +FollowSymLinks
+
+RewriteEngine On
+
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_POST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^home/?$ resources/frontend/home.php
+RewriteRule ^home\/([a-z0-9-_]+)\/?$ resources/frontend/home.php?menu=$1
+RewriteRule ^home\/([a-z0-9-_]+)\/([a-z0-9-_@]+)\/?$ resources/frontend/home.php?menu=$1&submenu=$2
+RewriteRule ^login/?$ resources/frontend/auth.php
+RewriteRule ^logout/?$ resources/backend/logout.php
+
+RewriteRule ^dashboard/?$ resources/backend/dashboard.php
+RewriteRule ^dashboard\/([a-z0-9-_]+)\/([a-z0-9-_@]+)\/?$ resources/backend/dashboard.php?menu=$1&submenu=$2
+RewriteRule ^api/v1/([a-z-]+)\/?$ resources/app/api.php?tipe=$1
+
+RewriteRule ^list?$ resources/app/list.php
+RewriteRule ^fetch?$ resources/app/fetch.php
+RewriteRule ^modal?$ resources/app/modal.php
+RewriteRule ^download?$ resources/app/download.php

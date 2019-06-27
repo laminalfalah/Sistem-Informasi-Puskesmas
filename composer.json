@@ -1,0 +1,17 @@
+{
+    "name": "laminalfalah/simas",
+    "description": "LTA",
+    "type": "project",
+    "license": "Open Source",
+    "authors": [
+        {
+            "name": "Laminal Falah",
+            "email": "laminalfalah.lf@gmail.com"
+        }
+    ],
+    "require": {
+        "ramsey/uuid": "^3.8",
+        "setasign/fpdf": "1.8.1"
+    },
+    "minimum-stability": "dev"
+}

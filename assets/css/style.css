@@ -1,0 +1,935 @@
+body {
+  height: auto; 
+  min-height: 100%; 
+  padding-right: 0px !important;
+}
+#badBrowser, noscript { 
+  background-color: #3E8FBA; 
+  color: #fff; 
+  margin: 0px auto; 
+  padding: 25% 20px; 
+  text-align: center; 
+  width: 100%; 
+  position: fixed; 
+  top: 0; 
+  z-index: 100000; 
+  font-size: 30px;
+}
+#badBrowser, noscript a { 
+  color: #000; 
+}
+#badBrowser, noscript a:hover { 
+  color: #fff; 
+}
+.modal-content {
+  border-radius: 10px;
+}
+#login div.form-group {
+  margin-bottom: 22px;
+}
+#login input.btn {
+  border-radius: 5px;
+}
+.login-box-body, .register-box-body {
+    border-radius: 10px !important;
+}
+#loading {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 41, 37, 0.64);
+}
+#loading i {
+  display: inline-block;
+  color: #fff;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 45%;
+}
+input.error {
+  color: red;
+}
+label.error {
+  color: red;
+}
+
+.swal2-container {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+}
+.swal2-popup {
+  font-size: 1.2em !important;
+}
+.swal2-popup.swal2-toast {
+  font-size: 1.6em !important;
+  padding: 2em !important;
+}
+
+li.user-menu > a.dropdown-toggle {
+  padding: 15px 22px;
+}
+.navbar-nav > .user-menu > .dropdown-menu {
+  width: 160px;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body {
+  padding: 0px;
+}
+
+#carousel-example-generic {
+  max-height: 300px;
+  height: 300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#carousel-example-generic > div.carousel-inner {
+  max-height: 300px;
+}
+
+#carousel-example-generic > div.carousel-inner > .item > img {
+  max-height: 300px;
+  max-width: 100%;
+  height: 300px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.table_dokter thead tr th,
+.table_pasien thead tr th,
+.table_staff thead tr th,
+.table_spesialis thead tr th,
+.table_darah thead tr th,
+.table_obat thead tr th,
+.table_satuan thead tr th,
+.table_jadwal thead tr th,
+.table_resep thead tr th,
+.table_rekam_medis thead tr th,
+.table_rawat_jalan thead tr th,
+.table_pembayaran thead tr th,
+.table_berita thead tr th,
+.table_poli thead tr th,
+.table_beranda thead tr th {
+  text-align: center !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+}
+
+.table_dokter thead tr th:first-child,
+.table_pasien thead tr th:first-child,
+.table_staff thead tr th:first-child,
+.table_spesialis thead tr th:first-child,
+.table_darah thead tr th:first-child,
+.table_obat thead tr th:first-child,
+.table_satuan thead tr th:first-child,
+.table_jadwal thead tr th:first-child,
+.table_resep thead tr th:first-child,
+.table_rekam_medis thead tr th:first-child,
+.table_rawat_jalan thead tr th:first-child,
+.table_pembayaran thead tr th:first-child,
+.table_berita thead tr th:first-child,
+.table_poli thead tr th:first-child,
+.table_beranda thead tr th:first-child {
+  width: 5% !important;
+}
+
+.table_dokter tbody tr td:first-child,
+.table_pasien tbody tr td:first-child,
+.table_staff tbody tr td:first-child,
+.table_spesialis tbody tr td:first-child,
+.table_darah tbody tr td:first-child,
+.table_obat tbody tr td:first-child,
+.table_satuan tbody tr td:first-child,
+.table_jadwal tbody tr td:first-child,
+.table_resep tbody tr td:first-child,
+.table_rekam_medis tbody tr td:first-child,
+.table_rawat_jalan tbody tr td:first-child,
+.table_pembayaran tbody tr td:first-child,
+.table_berita tbody tr td:first-child,
+.table_poli tbody tr td:first-child,
+.table_beranda tbody tr td:first-child {
+  text-align: center !important;
+  font-weight: 600;
+}
+
+.table_dokter tbody tr td:nth-child(2), .table_dokter tbody tr td:nth-child(3), .table_dokter tbody tr td:nth-child(4),
+.table_pasien tbody tr td:nth-child(2), .table_pasien tbody tr td:nth-child(3), .table_pasien tbody tr td:nth-child(4),
+.table_staff tbody tr td:nth-child(2), .table_staff tbody tr td:nth-child(3), .table_staff tbody tr td:nth-child(4),
+.table_obat tbody tr td:nth-child(2), .table_obat tbody tr td:nth-child(3),
+.table_resep tbody tr td:nth-child(2), .table_resep tbody tr td:nth-child(3), .table_resep tbody tr td:nth-child(4),
+.table_rekam_medis tbody tr td:nth-child(2), .table_rekam_medis tbody tr td:nth-child(3), .table_rekam_medis tbody tr td:nth-child(4) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+}
+
+.table_dokter thead tr th:last-child,
+.table_pasien thead tr th:last-child,
+.table_staff thead tr th:last-child,
+.table_spesialis thead tr th:last-child,
+.table_darah thead tr th:last-child,
+.table_obat thead tr th:last-child,
+.table_satuan thead tr th:last-child,
+.table_resep thead tr th:last-child,
+.table_rekam_medis thead tr th:last-child,
+.table_rawat_jalan thead tr th:last-child,
+.table_pembayaran thead tr th:last-child,
+.table_berita thead tr th:last-child,
+.table_poli thead tr th:last-child,
+.table_beranda thead tr th:last-child {
+  width: 18% !important;
+}
+
+.table_dokter tbody tr td:last-child,
+.table_pasien tbody tr td:last-child,
+.table_staff tbody tr td:last-child,
+.table_spesialis tbody tr td:last-child,
+.table_darah tbody tr td:last-child,
+.table_obat tbody tr td:last-child,
+.table_satuan tbody tr td:last-child,
+.table_jadwal tbody tr td:last-child,
+.table_resep tbody tr td:last-child,
+.table_rekam_medis tbody tr td:last-child,
+.table_rawat_jalan tbody tr td:last-child,
+.table_pembayaran tbody tr td:last-child,
+.table_berita tbody tr td:last-child,
+.table_poli tbody tr td:last-child,
+.table_beranda tbody tr td:last-child {
+  text-align: center !important;
+}
+
+.table_dokter thead tr th:nth-last-child(2), .table_dokter thead tr th:nth-last-child(3),
+.table_pasien thead tr th:nth-last-child(2), .table_pasien thead tr th:nth-last-child(3),
+.table_staff thead tr th:nth-last-child(2), .table_staff thead tr th:nth-last-child(3),
+.table_obat thead tr th:nth-last-child(2), .table_obat thead tr th:nth-last-child(3), .table_obat thead tr th:nth-last-child(4),
+.table_berita thead tr th:nth-last-child(2),
+.table_resep thead tr th:nth-last-child(2),
+.table_rawat_jalan thead tr th:nth-last-child(2),
+.table_rekam_medis thead tr th:nth-last-child(2) {
+  width: 15% !important;
+}
+
+.table_dokter tbody tr td:nth-last-child(2), .table_dokter tbody tr td:nth-last-child(3),
+.table_pasien tbody tr td:nth-last-child(2), .table_pasien tbody tr td:nth-last-child(3),
+.table_staff tbody tr td:nth-last-child(2), .table_staff tbody tr td:nth-last-child(3),
+.table_obat tbody tr td:nth-last-child(2), .table_obat tbody tr td:nth-last-child(3), .table_obat tbody tr td:nth-last-child(4),
+.table_berita tbody tr td:nth-last-child(2),
+.table_jadwal tbody tr td:nth-last-child(2),
+.table_resep tbody tr td:nth-last-child(2),
+.table_rekam_medis tbody tr td:nth-last-child(2),
+.table_rawat_jalan tbody tr td:nth-last-child(2) {
+  text-align: center !important;
+}
+
+#detail-table tr td:first-child {
+  width: 27% !important;
+}
+.select2-selection {
+  padding: 3px !important;
+}
+
+/* -- TABLE list_item -- */
+.table_list_item thead tr th {
+  text-align: center !important;
+  max-width: 100%;
+}
+.table_list_item thead tr th:first-child {
+  width: 3% !important;
+}
+.table_list_item tbody tr td:first-child {
+  text-align: center !important;
+  font-weight: 600;
+}
+.table_list_item tbody tr td:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+}
+.table_list_item thead tr th:nth-child(3) {
+  width: 20% !important;
+}
+.table_list_item thead tr th:nth-last-child(3) {
+  width: 15% !important;
+}
+.table_list_item tbody tr td:nth-last-child(3) {
+  text-align: center !important;
+}
+.table_list_item thead tr th:nth-last-child(2) {
+  width: 15% !important;
+}
+.table_list_item tbody tr td:nth-last-child(2) {
+  text-align: center !important;
+}
+.table_list_item thead tr th:last-child {
+  width: 15% !important;
+}
+.table_list_item tbody tr td:last-child {
+  text-align: center !important;
+}
+/* -- TABLE list_item --*/
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 28px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  div#message {
+    font-size: 12px;
+  }
+  li.user-menu {
+    margin-right: 8px;
+  }
+  li.user-menu > a.dropdown-toggle {
+    padding: 15px 14px;
+  }
+  .navbar-nav > .user-menu > .dropdown-menu {
+    width: 160px;
+  }
+  .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+    right: 2%;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 30px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 33px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 31px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 31px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 35px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPhone X / XS ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 33px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPhone Xr / XS Max ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+  .table_dokter thead tr th:first-child,
+  .table_pasien thead tr th:first-child,
+  .table_staff thead tr th:first-child,
+  .table_spesialis thead tr th:first-child,
+  .table_darah thead tr th:first-child,
+  .table_obat thead tr th:first-child,
+  .table_satuan thead tr th:first-child,
+  .table_jadwal thead tr th:first-child,
+  .table_resep thead tr th:first-child,
+  .table_rekam_medis thead tr th:first-child,
+  .table_rawat_jalan thead tr th:first-child,
+  .table_pembayaran thead tr th:first-child,
+  .table_berita thead tr th:first-child,
+  .table_poli thead tr th:first-child,
+  .table_beranda thead tr th:first-child {
+    width: 10% !important;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 100%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPad Pro 10.5" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1112px) and (max-device-width: 834px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .login-box, .register-box {
+    width: 90%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1336px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1336px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+  }
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 1336px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 60%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .login-box, .register-box {
+    width: 40%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .login-box, .register-box {
+    width: 30%;
+    margin-top: 0px;
+    height: 90%;
+  }
+  .login-logo,
+  .register-logo {
+    font-size: 36px;
+    text-align: center;
+    margin: 15px auto;
+    font-weight: 300;
+  }
+}
