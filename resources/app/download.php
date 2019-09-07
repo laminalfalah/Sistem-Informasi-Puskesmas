@@ -7,8 +7,8 @@
     require_once (ABSPATH . '../config/enkripsi.php');
     require_once (ABSPATH . '../config/functions.php');
     $file = hash('sha1',strtotime('now'));
-    #header('Content-type: application/pdf');
-    #header('Content-type: application/force-download');
+    header('Content-type: application/pdf');
+    header('Content-type: application/force-download');
 
     if (!isset($_SESSION['is_logged'])) {
         echo "<script>window.location.href= '".$url."login/';</script>";
