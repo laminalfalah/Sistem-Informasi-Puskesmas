@@ -7,8 +7,8 @@
     require_once (ABSPATH . '../config/enkripsi.php');
     require_once (ABSPATH . '../config/functions.php');
     $file = hash('sha1',strtotime('now'));
-    header('Content-type: application/pdf');
-    header('Content-type: application/force-download');
+    #header('Content-type: application/pdf');
+    #header('Content-type: application/force-download');
 
     if (!isset($_SESSION['is_logged'])) {
         echo "<script>window.location.href= '".$url."login/';</script>";
@@ -574,7 +574,12 @@
                 $awal = $_GET['start'];
                 $akhir = $_GET['end'];
                 $filter = $_GET['filter'];
-                $sql = "SELECT code_obat,name_obat,stock,price_buy,price_sale,name_unit,created_at FROM tb_obat AS o INNER JOIN tb_unit AS u ON u.id_unit = o.id_unit";
+                $sql = "SELECT code_obat,name_obat,stock,price_buy,price_sale,name_unit,created_at,IF(TOTAL IS NULL, 0, TOTAL) AS DIPAKAI
+                        FROM tb_obat AS o 
+                        INNER JOIN tb_unit USING(id_unit)
+                        LEFT JOIN (
+                            SELECT code_obat, SUM(amount) AS TOTAL FROM tb_resep_detail GROUP BY code_obat
+                        ) AS RD USING(code_obat)";
                 $res = "";
                 $pdf = new PDF('P','cm','A4');
                 if ($filter == 1) {
@@ -605,33 +610,40 @@
                     $sql .= " ORDER BY created_at DESC LIMIT $awal,$akhir";
                     $res = mysqli_query($link,$sql);
                 }
+
                 $pdf->AddPage();
                 $pdf->AliasNbPages();
                 $pdf->SetFont('Arial','B',8);
                 $pdf->SetX(1);
                 $pdf->Cell(0.8,0.5,'No.',1,0,'C');
                 $pdf->Cell(2.85,0.5,'Kode Obat',1,0,'C');
-                $pdf->Cell(6.44,0.5,'Nama Obat',1,0,'C');
+                $pdf->Cell(6.34,0.5,'Nama Obat',1,0,'C');
                 $pdf->Cell(2.0,0.5,'Stok',1,0,'C');
                 $pdf->Cell(2.0,0.5,'Harga Beli',1,0,'C');
                 $pdf->Cell(2.0,0.5,'Harga Jual',1,0,'C');
-                $pdf->Cell(3,0.5,'Keterangan',1,1,'C');
+                $pdf->Cell(3.1,0.5,'Keterangan',1,1,'C');
                 $pdf->SetFont('Arial','',6.5);
                 $i = 1;
                 while ($r = mysqli_fetch_assoc($res)) {
                     $pdf->SetX(1);
                     $pdf->Cell(0.8,0.5,$i++.".",1,0,'C');
                     $pdf->Cell(2.85,0.5,$r['code_obat'],1,0,'L');
-                    $pdf->Cell(6.44,0.5,ucwords(substr($r['name_obat'],0,25)),1,0,'L');
+                    $pdf->Cell(6.34,0.5,ucwords(substr($r['name_obat'],0,25)),1,0,'L');
                     $pdf->Cell(2.0,0.5,number_format($r['stock'],0,'.','.') . " " . $r['name_unit'],1,0,'C');
                     $pdf->Cell(2.0,0.5,"Rp " . number_format($r['price_buy'],0,'.','.'),1,0,'C');
                     $pdf->Cell(2.0,0.5,"Rp " . number_format($r['price_sale'],0,'.','.'),1, 0,'C');
-                    $pdf->Cell(3,0.5,"",1, 1, 'C');
+                    $dipakai = $r['DIPAKAI'] > 0 ? number_format($r['DIPAKAI'],0,'.','.') . " telah dijual" : "-";
+                    $pdf->Cell(3.1,0.5,$dipakai,1, 1, 'C');
                 }
                 $pdf->Output('',$file.".pdf","I",true);
             } elseif ($f == $enc['data-obat']['remote'] && $d == $enc['data-obat']['unduh'] && isset($_GET['id'])) {
                 $id = $_GET['id'];
-                $sql = "SELECT code_obat,name_obat,stock,price_buy,price_sale,name_unit,description,created_at FROM tb_obat AS o INNER JOIN tb_unit AS u ON u.id_unit = o.id_unit
+                $sql = "SELECT code_obat,name_obat,stock,price_buy,price_sale,name_unit,description,created_at, IF(TOTAL IS NULL, 0, TOTAL) AS DIPAKAI 
+                        FROM tb_obat AS o 
+                        INNER JOIN tb_unit AS u USING(id_unit)
+                        LEFT JOIN (
+                            SELECT code_obat, SUM(amount) AS TOTAL FROM tb_resep_detail GROUP BY code_obat
+                        ) AS RD USING(code_obat)
                         WHERE o.code_obat='$id'";
                 $query = mysqli_query($link,$sql);
                 if (mysqli_num_rows($query) > 0) {
@@ -671,6 +683,13 @@
                     $pdf->Cell(3.01,0.5,'Deskripsi',0,0,'L');
                     $pdf->Cell(0.1,0.5,':',0,0,'C');
                     $pdf->MultiCell(15.89,0.5,$r['description'],0,'J');
+                    
+                    $dipakai = $r['DIPAKAI'] > 0 ? number_format($r['DIPAKAI'],0,'.','.') . " " . $r['name_unit'] : "-";
+
+                    $pdf->SetX(1);
+                    $pdf->Cell(3.01,0.5,'Telah dijual',0,0,'L');
+                    $pdf->Cell(0.1,0.5,':',0,0,'C');
+                    $pdf->Cell(15.89,0.5,$dipakai,0,1,'L');
 
                     $pdf->ln(0.25);
                     $pdf->SetFont('Arial','B',8);
@@ -1464,6 +1483,7 @@
             } else {
                 $pdf = new PDF('P','cm','A4');
             }
+            closedb();
         } else {
             echo "Invalid Url";
         }

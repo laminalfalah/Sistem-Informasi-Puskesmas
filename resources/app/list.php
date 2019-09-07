@@ -124,9 +124,9 @@ if (isset($_GET['f']) && isset($_GET['d'])) {
           );
         }
     } elseif ($route == $enc['detail']['remote'] && $dest == $enc['detail']['sha1'][2]) {
-        $nama = sanitate($requestData['nama']);
-        $brta = sanitate($requestData['id']);
-        $kmtr = sanitate($requestData['komentar']);
+        $nama = sanitate(strip_tags($requestData['nama']));
+        $brta = sanitate(strip_tags($requestData['id']));
+        $kmtr = sanitate(strip_tags($requestData['komentar']));
         $date = date('Y-m-d H:i:s',strtotime('now'));
   
         $query = mysqli_query($link,"INSERT INTO tb_berita_komen VALUES(NULL,'$brta','$nama','$kmtr','$date')");
@@ -143,6 +143,7 @@ if (isset($_GET['f']) && isset($_GET['d'])) {
           );
         }
     }
+    closedb();
 } else {
     $data = array('code' => 404, 'message' => 'Invalid Url');
 }

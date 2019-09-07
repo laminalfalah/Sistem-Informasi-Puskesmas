@@ -37,6 +37,7 @@ if ($mods == "login") {
             } else {
                 $data['auth'] = result(0, 'Username or Password is wrong !');
             }
+            closedb();
         }
     } else {
         $data['auth'] = result(0, 'Username or Password is required !');

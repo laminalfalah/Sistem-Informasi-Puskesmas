@@ -3947,6 +3947,7 @@ if (isset($_SESSION['is_logged'])) {
       }
     }
     // API Ubah Password End //
+    closedb();
   } else {
     $data = array('code' => 404, 'message' => 'Invalid Url');
   }

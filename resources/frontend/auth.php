@@ -18,9 +18,6 @@
           <input type="password" name="password" class="form-control" placeholder="Password" required>
         </div>
         <div class="row">
-          <!--div class="col-xs-4 pull-left">
-            <a href="<?= BASE_URL . 'home/' ?>" class="btn btn-default btn-block">Home</a>
-          </div-->
           <div class="col-xs-4 pull-right">
             <input type="submit" class="btn btn-info btn-block" value="Login">
           </div>
