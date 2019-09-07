@@ -90,7 +90,7 @@ $(function () {
             }
         },
         submitHandler: function (form) {
-            if (!validate()) return false;
+            if (!validateResep()) return false;
             var uuid = $('#add-resep').attr('data-target');
             var resep = new FormData($('#add-resep')[0]);
             $.ajax({
@@ -131,7 +131,7 @@ $(function () {
         }
     });
 
-    function validate() {
+    function validateResep() {
         valid = true;
         valid = !$('tbody#list_item').children().length == 0;
         if (!valid) {
